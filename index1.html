@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Web Developer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="profile-img">
+            <!-- Add your profile image here -->
+            <img src="profile.jpg" alt="Your Name" />
+        </div>
+        <h1>Your Name</h1>
+        <p>Web Developer | Cybersecurity Enthusiast</p>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hi, I'm [Your Name], a passionate web developer with a focus on security. I enjoy building user-friendly websites and applications with a strong emphasis on secure coding practices.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>React, Node.js</li>
+            <li>Cybersecurity Basics</li>
+            <li>Git, GitHub</li>
+        </ul>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates">
+        <h2>Certificates</h2>
+        <div class="certificate">
+            <h3>Web Development Certificate</h3>
+            <p>Completed a comprehensive program in web development, learning front-end and back-end technologies.</p>
+            <ul>
+                <li>Skills Learned:
+                    <ul>
+                        <li>HTML5, CSS3</li>
+                        <li>JavaScript, React</li>
+                        <li>Node.js</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="certificate">
+            <h3>Cybersecurity Basics Certificate</h3>
+            <p>A basic course focused on understanding the fundamentals of cybersecurity.</p>
+            <ul>
+                <li>Skills Learned:
+                    <ul>
+                        <li>Network Security</li>
+                        <li>Encryption Techniques</li>
+                        <li>Vulnerability Assessment</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- Add more certificates here -->
+    </section>
+
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <p>Here are some projects I've worked on:</p>
+        <ul>
+            <li><a href="#">Project 1</a> - Description of project.</li>
+            <li><a href="#">Project 2</a> - Description of project.</li>
+        </ul>
+    </section>
+
+    <!-- Contact Form Popup Button -->
+    <button id="openFormBtn" class="open-form-btn">Contact Me</button>
+
+    <!-- Popup Form -->
+    <div id="contactFormPopup" class="contact-form-popup">
+        <div class="form-container">
+            <span id="closeFormBtn" class="close-btn">&times;</span>
+            <h2>Contact Me</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <h3>Contact</h3>
+        <p>Email: your.email@example.com</p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
