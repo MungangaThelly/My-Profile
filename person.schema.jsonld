@@ -1,0 +1,14 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Munganga Thelly Mulongo",
+  "url": "https://github.com/in/yourprofile",
+  "sameAs": [
+    "https://linkedin.com/in/thelly660",
+    "https://www.credly.com/users/munganga-thelly-mulongo"
+  ],
+  "jobTitle": "Web Developer, Cybersecurity Enthusiast",
+  "image": "p.jpg",
+  "email": "tdmm888@outlook.com",
+  "alumniOf": "[Your University or School]"
+}
