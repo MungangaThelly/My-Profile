@@ -221,6 +221,7 @@ a.primary-btn[download] { margin-bottom: 1rem; }
     transform: translateY(-2px) scale(1.01);
 }
 /* ========== Design Tokens & Base ========== */
+
 :root {
     --font-sans: 'Inter', system-ui, Arial, sans-serif;
     --color-bg: #0f1115;
@@ -242,6 +243,24 @@ a.primary-btn[download] { margin-bottom: 1rem; }
     --space-md: 1rem;
     --space-lg: 1.5rem;
     --space-xl: 2.25rem;
+}
+
+[data-theme="dark"] {
+    --color-bg: #0f1115;
+    --color-bg-alt: #161b22;
+    --color-surface: #1f242b;
+    --color-border: #2d3239;
+    --color-text: #f5f7fa;
+    --color-text-dim: #c3c9d2;
+}
+
+[data-theme="light"] {
+    --color-bg: #f5f7fa;
+    --color-bg-alt: #eef1f5;
+    --color-surface: #ffffff;
+    --color-border: #d0d7de;
+    --color-text: #1b2025;
+    --color-text-dim: #505960;
 }
 
 * { box-sizing: border-box; }
