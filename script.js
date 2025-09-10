@@ -55,7 +55,7 @@ window.addEventListener('scroll', revealOnScroll);
 window.addEventListener('DOMContentLoaded', revealOnScroll);
 // Dark mode toggle with localStorage persistence
 const darkToggle = document.getElementById('darkModeToggle');
-const root = document.documentElement;
+const root = document.body;
 const darkPref = window.matchMedia('(prefers-color-scheme: dark)').matches;
 const storedTheme = localStorage.getItem('theme');
 if (storedTheme === 'dark' || (!storedTheme && darkPref)) {

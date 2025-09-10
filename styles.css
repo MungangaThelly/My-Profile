@@ -1,3 +1,6 @@
+body {
+    transition: background .4s, color .4s;
+}
 /* About section: light background, dark text for readability */
 #about.section {
     background: #f7f8fa;
