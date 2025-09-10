@@ -1,3 +1,17 @@
+/* Typing animation for tagline */
+#typingTagline { font-family: inherit; border-right: 2px solid var(--color-accent); white-space: nowrap; overflow: hidden; }
+
+/* Animated page transitions */
+.page-transition { opacity: 0; transform: translateY(30px); transition: opacity .7s, transform .7s; }
+.visible-page { opacity: 1; transform: none; }
+
+/* Section scrollspy nav highlight */
+.nav-link.active, .nav-link.active:focus-visible {
+    color: var(--color-accent) !important;
+    background: var(--color-surface);
+    font-weight: 700;
+    text-decoration: underline;
+}
 body {
     transition: background .4s, color .4s;
 }

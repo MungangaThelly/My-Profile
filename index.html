@@ -24,7 +24,53 @@
                         </div>
             <div class="intro-text">
                 <h1 class="site-title">Munganga Thelly Mulongo</h1>
-                <p class="tagline">Web Developer • Cybersecurity Enthusiast</p>
+                <p class="tagline" id="typingTagline">Web Developer • Cybersecurity Enthusiast</p>
+        <script src="script.js" defer></script>
+        <script>
+        // Typing animation for tagline
+        window.addEventListener('DOMContentLoaded', function() {
+            const tagline = document.getElementById('typingTagline');
+            if (!tagline) return;
+            const text = tagline.textContent;
+            tagline.textContent = '';
+            let i = 0;
+            function type() {
+                if (i <= text.length) {
+                    tagline.textContent = text.slice(0, i) + (i < text.length ? '|' : '');
+                    i++;
+                    setTimeout(type, 60);
+                } else {
+                    tagline.textContent = text;
+                }
+            }
+            type();
+        });
+
+        // Animated page transitions (fade/slide between sections)
+        document.querySelectorAll('main > section').forEach(section => {
+            section.classList.add('page-transition');
+        });
+        window.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('main > section').forEach(section => {
+                section.classList.add('visible-page');
+            });
+        });
+        // Section scrollspy
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = Array.from(document.querySelectorAll('main > section'));
+        function onScrollSpy() {
+            let scrollPos = window.scrollY + 120;
+            let current = sections[0];
+            for (const sec of sections) {
+                if (sec.offsetTop <= scrollPos) current = sec;
+            }
+            navLinks.forEach(link => {
+                link.classList.toggle('active', link.getAttribute('href') === '#' + current.id);
+            });
+        }
+        window.addEventListener('scroll', onScrollSpy);
+        window.addEventListener('DOMContentLoaded', onScrollSpy);
+        </script>
                 <nav aria-label="Primary" class="primary-nav">
                     <ul>
                         <li><a href="#about">About</a></li>
