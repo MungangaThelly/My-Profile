@@ -13,13 +13,14 @@
 <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header" role="banner">
+        <header class="site-header parallax-bg" role="banner" style="background-image: url('https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1200&q=80');">
         <button id="darkModeToggle" class="dark-toggle" aria-pressed="false" aria-label="Toggle dark mode"><span aria-hidden="true">🌙</span></button>
         <div class="container header-inner">
                         <div class="profile-img">
-                                <picture>
-                                    <source srcset="p.webp" type="image/webp">
-                                    <img src="p.jpg" alt="Portrait of Munganga Thelly Mulongo" width="120" height="120" loading="lazy" decoding="async" />
-                                </picture>
+                    <picture class="parallax-img-wrap">
+                        <source srcset="p.webp" type="image/webp">
+                        <img src="p.jpg" alt="Portrait of Munganga Thelly Mulongo" width="120" height="120" loading="lazy" decoding="async" class="parallax-img" />
+                    </picture>
                         </div>
             <div class="intro-text">
                 <h1 class="site-title">Munganga Thelly Mulongo</h1>
@@ -110,41 +111,70 @@
         </section>
 
     <section id="portfolio" class="section container fade-in">
-        <section id="blog" class="section container fade-in">
-            <h2>Blog & Articles</h2>
-            <ul class="blog-list">
-                <li>
-                    <article class="blog-card reveal" tabindex="0" aria-labelledby="blog1-title">
-                        <img src="https://via.placeholder.com/400x180.webp?text=Accessibility" alt="How to Build Accessible Web Apps cover" class="blog-img" width="400" height="180" loading="lazy" decoding="async" />
-                        <h3 id="blog1-title">How to Build Accessible Web Apps</h3>
-                        <ul class="blog-tags"><li>Accessibility</li><li>Best Practices</li></ul>
-                        <p class="blog-meta">May 2025 • 5 min read</p>
-                        <p>Best practices for making your web projects usable by everyone, including keyboard and screen reader users.</p>
-                        <button class="read-more-btn" data-blog="1" aria-haspopup="dialog">Read more</button>
-                    </article>
-                </li>
-                <li>
-                    <article class="blog-card reveal" tabindex="0" aria-labelledby="blog2-title">
-                        <img src="https://via.placeholder.com/400x180.webp?text=Web+Security" alt="Modern Web Security Essentials cover" class="blog-img" width="400" height="180" loading="lazy" decoding="async" />
-                        <h3 id="blog2-title">Modern Web Security Essentials</h3>
-                        <ul class="blog-tags"><li>Security</li><li>Web</li></ul>
-                        <p class="blog-meta">April 2025 • 7 min read</p>
-                        <p>Key concepts and tools for securing your web applications in 2025 and beyond.</p>
-                        <button class="read-more-btn" data-blog="2" aria-haspopup="dialog">Read more</button>
-                    </article>
-                </li>
-            </ul>
-            <!-- Blog Modal -->
-            <div id="blogModal" class="blog-modal" role="dialog" aria-modal="true" aria-labelledby="blogModalTitle" hidden>
-                <div class="blog-modal-content" role="document">
-                    <button id="closeBlogModal" class="close-btn" aria-label="Close blog post">×</button>
-                    <h2 id="blogModalTitle">Blog Post</h2>
-                    <div id="blogModalBody"></div>
-                </div>
+        <h2>Selected Projects</h2>
+        <ul class="project-list">
+            <li>
+                <article class="project-card" tabindex="0" aria-labelledby="proj1-title">
+                    <img src="https://via.placeholder.com/400x200.webp?text=Portfolio+App" alt="Screenshot of Portfolio App" class="project-img" width="400" height="200" loading="lazy" decoding="async" />
+                        <span class="parallax-img-wrap"><img src="https://via.placeholder.com/400x200.webp?text=Portfolio+App" alt="Screenshot of Portfolio App" class="project-img parallax-img" width="400" height="200" loading="lazy" decoding="async" /></span>
+                    <h3 id="proj1-title"><a href="https://github.com/in/yourprofile/portfolio" target="_blank" rel="noopener">Portfolio Website</a></h3>
+                    <ul class="project-tags">
+                        <li>HTML</li><li>CSS</li><li>JS</li><li>Accessibility</li>
+                    </ul>
+                    <p class="project-meta">Role: Frontend | 2025</p>
+                    <p>Modern, accessible, and responsive portfolio. <strong>+98 Lighthouse score</strong>.</p>
+                </article>
+            </li>
+            <li>
+                <article class="project-card" tabindex="0" aria-labelledby="proj2-title">
+                    <img src="https://via.placeholder.com/400x200.webp?text=Security+Dashboard" alt="Screenshot of Security Dashboard" class="project-img" width="400" height="200" loading="lazy" decoding="async" />
+                        <span class="parallax-img-wrap"><img src="https://via.placeholder.com/400x200.webp?text=Security+Dashboard" alt="Screenshot of Security Dashboard" class="project-img parallax-img" width="400" height="200" loading="lazy" decoding="async" /></span>
+                    <h3 id="proj2-title"><a href="https://github.com/in/yourprofile/security-dashboard" target="_blank" rel="noopener">Security Dashboard</a></h3>
+                    <ul class="project-tags">
+                        <li>React</li><li>Node.js</li><li>API</li><li>Charts</li>
+                    </ul>
+                    <p class="project-meta">Role: Fullstack | 2024</p>
+                    <p>Real-time threat monitoring dashboard. <strong>Reduced incident response time by 30%</strong>.</p>
+                </article>
+            </li>
+        </ul>
+    </section>
+
+    <section id="blog" class="section container fade-in">
+        <h2>Blog & Articles</h2>
+        <ul class="blog-list">
+            <li>
+                <article class="blog-card reveal" tabindex="0" aria-labelledby="blog1-title">
+                    <img src="https://via.placeholder.com/400x180.webp?text=Accessibility" alt="How to Build Accessible Web Apps cover" class="blog-img" width="400" height="180" loading="lazy" decoding="async" />
+                        <span class="parallax-img-wrap"><img src="https://via.placeholder.com/400x180.webp?text=Accessibility" alt="How to Build Accessible Web Apps cover" class="blog-img parallax-img" width="400" height="180" loading="lazy" decoding="async" /></span>
+                    <h3 id="blog1-title">How to Build Accessible Web Apps</h3>
+                    <ul class="blog-tags"><li>Accessibility</li><li>Best Practices</li></ul>
+                    <p class="blog-meta">May 2025 • 5 min read</p>
+                    <p>Best practices for making your web projects usable by everyone, including keyboard and screen reader users.</p>
+                    <button class="read-more-btn" data-blog="1" aria-haspopup="dialog">Read more</button>
+                </article>
+            </li>
+            <li>
+                <article class="blog-card reveal" tabindex="0" aria-labelledby="blog2-title">
+                    <img src="https://via.placeholder.com/400x180.webp?text=Web+Security" alt="Modern Web Security Essentials cover" class="blog-img" width="400" height="180" loading="lazy" decoding="async" />
+                        <span class="parallax-img-wrap"><img src="https://via.placeholder.com/400x180.webp?text=Web+Security" alt="Modern Web Security Essentials cover" class="blog-img parallax-img" width="400" height="180" loading="lazy" decoding="async" /></span>
+                    <h3 id="blog2-title">Modern Web Security Essentials</h3>
+                    <ul class="blog-tags"><li>Security</li><li>Web</li></ul>
+                    <p class="blog-meta">April 2025 • 7 min read</p>
+                    <p>Key concepts and tools for securing your web applications in 2025 and beyond.</p>
+                    <button class="read-more-btn" data-blog="2" aria-haspopup="dialog">Read more</button>
+                </article>
+            </li>
+        </ul>
+        <!-- Blog Modal -->
+        <div id="blogModal" class="blog-modal" role="dialog" aria-modal="true" aria-labelledby="blogModalTitle" hidden>
+            <div class="blog-modal-content" role="document">
+                <button id="closeBlogModal" class="close-btn" aria-label="Close blog post">×</button>
+                <h2 id="blogModalTitle">Blog Post</h2>
+                <div id="blogModalBody"></div>
             </div>
-        </section>
-            <h2>Selected Projects</h2>
-            <ul class="project-list">
+        </div>
+    </section>
                 <li>
                     <article class="project-card" tabindex="0" aria-labelledby="proj1-title">
                         <img src="https://via.placeholder.com/400x200.webp?text=Portfolio+App" alt="Screenshot of Portfolio App" class="project-img" width="400" height="200" loading="lazy" decoding="async" />
