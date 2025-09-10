@@ -114,20 +114,34 @@
             <h2>Blog & Articles</h2>
             <ul class="blog-list">
                 <li>
-                    <article class="blog-card">
-                        <h3><a href="#">How to Build Accessible Web Apps</a></h3>
+                    <article class="blog-card reveal" tabindex="0" aria-labelledby="blog1-title">
+                        <img src="https://via.placeholder.com/400x180.webp?text=Accessibility" alt="How to Build Accessible Web Apps cover" class="blog-img" width="400" height="180" loading="lazy" decoding="async" />
+                        <h3 id="blog1-title">How to Build Accessible Web Apps</h3>
+                        <ul class="blog-tags"><li>Accessibility</li><li>Best Practices</li></ul>
                         <p class="blog-meta">May 2025 • 5 min read</p>
                         <p>Best practices for making your web projects usable by everyone, including keyboard and screen reader users.</p>
+                        <button class="read-more-btn" data-blog="1" aria-haspopup="dialog">Read more</button>
                     </article>
                 </li>
                 <li>
-                    <article class="blog-card">
-                        <h3><a href="#">Modern Web Security Essentials</a></h3>
+                    <article class="blog-card reveal" tabindex="0" aria-labelledby="blog2-title">
+                        <img src="https://via.placeholder.com/400x180.webp?text=Web+Security" alt="Modern Web Security Essentials cover" class="blog-img" width="400" height="180" loading="lazy" decoding="async" />
+                        <h3 id="blog2-title">Modern Web Security Essentials</h3>
+                        <ul class="blog-tags"><li>Security</li><li>Web</li></ul>
                         <p class="blog-meta">April 2025 • 7 min read</p>
                         <p>Key concepts and tools for securing your web applications in 2025 and beyond.</p>
+                        <button class="read-more-btn" data-blog="2" aria-haspopup="dialog">Read more</button>
                     </article>
                 </li>
             </ul>
+            <!-- Blog Modal -->
+            <div id="blogModal" class="blog-modal" role="dialog" aria-modal="true" aria-labelledby="blogModalTitle" hidden>
+                <div class="blog-modal-content" role="document">
+                    <button id="closeBlogModal" class="close-btn" aria-label="Close blog post">×</button>
+                    <h2 id="blogModalTitle">Blog Post</h2>
+                    <div id="blogModalBody"></div>
+                </div>
+            </div>
         </section>
             <h2>Selected Projects</h2>
             <ul class="project-list">
@@ -199,7 +213,23 @@
         </div>
     </footer>
 
-    <script src="script.js" defer></script>
+        <script src="script.js" defer></script>
+        <script>
+        // Smooth scroll for nav links
+        document.querySelectorAll('.primary-nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                    const target = document.querySelector(href);
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({behavior:'smooth'});
+                        target.focus({preventScroll:true});
+                    }
+                }
+            });
+        });
+        </script>
     <!-- Deployment meta for GitHub Pages/Netlify -->
     <meta name="generator" content="VS Code Copilot Modern Portfolio" />
 </body>
