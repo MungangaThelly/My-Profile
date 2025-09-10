@@ -1,3 +1,21 @@
+// Dark mode toggle with localStorage persistence
+const darkToggle = document.getElementById('darkModeToggle');
+const root = document.documentElement;
+const darkPref = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const storedTheme = localStorage.getItem('theme');
+if (storedTheme === 'dark' || (!storedTheme && darkPref)) {
+    root.setAttribute('data-theme', 'dark');
+    darkToggle?.setAttribute('aria-pressed', 'true');
+} else {
+    root.setAttribute('data-theme', 'light');
+    darkToggle?.setAttribute('aria-pressed', 'false');
+}
+darkToggle?.addEventListener('click', () => {
+    const isDark = root.getAttribute('data-theme') === 'dark';
+    root.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    localStorage.setItem('theme', isDark ? 'light' : 'dark');
+    darkToggle.setAttribute('aria-pressed', isDark ? 'false' : 'true');
+});
 // Accessible dialog + simple form handling
 const openFormBtn = document.getElementById('openFormBtn');
 const closeFormBtn = document.getElementById('closeFormBtn');
