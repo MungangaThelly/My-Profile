@@ -1,3 +1,16 @@
+/* About section: light background, dark text for readability */
+#about.section {
+    background: #f7f8fa;
+    color: #181a1b;
+}
+#about.section h2, #about.section p {
+    color: #181a1b;
+}
+
+/* Footer: always white text for contrast */
+.site-footer, .site-footer * {
+    color: #fff !important;
+}
 /* Navigation underline animation */
 .primary-nav { position: relative; }
 .nav-underline {
