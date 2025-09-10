@@ -15,6 +15,12 @@
     <header class="site-header" role="banner">
         <header class="site-header parallax-bg" role="banner" style="background-image: url('https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1200&q=80');">
         <button id="darkModeToggle" class="dark-toggle" aria-pressed="false" aria-label="Toggle dark mode"><span aria-hidden="true">🌙</span></button>
+        <div class="theme-picker" aria-label="Color theme picker">
+            <button class="theme-btn" data-theme="dark" title="Dark" style="background:#181a1b"></button>
+            <button class="theme-btn" data-theme="light" title="Light" style="background:#f5f7fa; border:1px solid #ccc;"></button>
+            <button class="theme-btn" data-theme="blue" title="Blue" style="background:#1e3a8a"></button>
+            <button class="theme-btn" data-theme="green" title="Green" style="background:#047857"></button>
+        </div>
         <div class="container header-inner">
                         <div class="profile-img">
                     <picture class="parallax-img-wrap">
@@ -23,7 +29,57 @@
                     </picture>
                         </div>
             <div class="intro-text">
-                <h1 class="site-title">Munganga Thelly Mulongo</h1>
+                                <h1 class="site-title">
+                                    <svg class="animated-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <circle cx="18" cy="18" r="16" stroke="#6366f1" stroke-width="4" stroke-dasharray="100" stroke-dashoffset="100">
+                                            <animate attributeName="stroke-dashoffset" from="100" to="0" dur="1.2s" fill="freeze" />
+                                        </circle>
+                                        <path d="M12 18l4 4 8-8" stroke="#10b981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                            <animate attributeName="stroke-dasharray" from="0,24" to="24,0" dur="1.2s" fill="freeze" />
+                                        </path>
+                                    </svg>
+                                    Munganga Thelly Mulongo
+                                </h1>
+        <!-- Floating chat/help widget -->
+        <button id="chatWidgetBtn" class="chat-widget-btn" aria-label="Open chat/help">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </button>
+        <div id="chatWidget" class="chat-widget" hidden>
+            <div class="chat-header">Need help? <button id="closeChat" aria-label="Close chat">×</button></div>
+            <div class="chat-body">
+                <p><strong>Hi! 👋</strong> How can I help you? (This is a demo widget.)</p>
+            </div>
+        </div>
+        <script>
+        // Theme picker logic
+        document.querySelectorAll('.theme-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const theme = btn.getAttribute('data-theme');
+                if (theme === 'dark' || theme === 'light') {
+                    document.body.setAttribute('data-theme', theme);
+                    localStorage.setItem('theme', theme);
+                } else if (theme === 'blue') {
+                    document.body.setAttribute('data-theme', 'blue');
+                    localStorage.setItem('theme', 'blue');
+                } else if (theme === 'green') {
+                    document.body.setAttribute('data-theme', 'green');
+                    localStorage.setItem('theme', 'green');
+                }
+            });
+        });
+        // Floating chat/help widget logic
+        const chatBtn = document.getElementById('chatWidgetBtn');
+        const chatWidget = document.getElementById('chatWidget');
+        const closeChat = document.getElementById('closeChat');
+        chatBtn?.addEventListener('click', () => {
+            chatWidget.removeAttribute('hidden');
+            chatBtn.setAttribute('hidden','');
+        });
+        closeChat?.addEventListener('click', () => {
+            chatWidget.setAttribute('hidden','');
+            chatBtn.removeAttribute('hidden');
+        });
+        </script>
                 <p class="tagline" id="typingTagline">Web Developer • Cybersecurity Enthusiast</p>
         <script src="script.js" defer></script>
         <script>
@@ -85,7 +141,17 @@
 
     <main id="main" tabindex="-1">
         <section id="about" class="section container">
-            <h2>About Me</h2>
+                        <h2>
+                            <svg class="animated-icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <circle cx="14" cy="14" r="12" stroke="#10b981" stroke-width="3" stroke-dasharray="75" stroke-dashoffset="75">
+                                    <animate attributeName="stroke-dashoffset" from="75" to="0" dur="1s" fill="freeze" />
+                                </circle>
+                                <path d="M14 8v4l3 3" stroke="#6366f1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <animate attributeName="stroke-dasharray" from="0,16" to="16,0" dur="1s" fill="freeze" />
+                                </path>
+                            </svg>
+                            About Me
+                        </h2>
             <p>I'm a web developer focused on creating performant, accessible, and secure user experiences. I combine front‑end engineering discipline with security awareness to build reliable, user‑centered applications.</p>
         </section>
 
@@ -157,7 +223,17 @@
         </section>
 
     <section id="portfolio" class="section container fade-in">
-        <h2>Selected Projects</h2>
+                <h2>
+                    <svg class="animated-icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <rect x="4" y="8" width="20" height="12" rx="3" stroke="#2563eb" stroke-width="3" stroke-dasharray="60" stroke-dashoffset="60">
+                            <animate attributeName="stroke-dashoffset" from="60" to="0" dur="1s" fill="freeze" />
+                        </rect>
+                        <path d="M8 14l4 4 8-8" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <animate attributeName="stroke-dasharray" from="0,20" to="20,0" dur="1s" fill="freeze" />
+                        </path>
+                    </svg>
+                    Selected Projects
+                </h2>
         <ul class="project-list">
             <li>
                 <article class="project-card" tabindex="0" aria-labelledby="proj1-title">
@@ -187,7 +263,20 @@
     </section>
 
     <section id="blog" class="section container fade-in">
-        <h2>Blog & Articles</h2>
+                <h2>
+                    <svg class="animated-icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <rect x="5" y="6" width="18" height="16" rx="3" stroke="#f59e42" stroke-width="3" stroke-dasharray="60" stroke-dashoffset="60">
+                            <animate attributeName="stroke-dashoffset" from="60" to="0" dur="1s" fill="freeze" />
+                        </rect>
+                        <line x1="9" y1="11" x2="19" y2="11" stroke="#6366f1" stroke-width="2.5">
+                            <animate attributeName="x2" from="9" to="19" dur="1s" fill="freeze" />
+                        </line>
+                        <line x1="9" y1="15" x2="17" y2="15" stroke="#10b981" stroke-width="2.5">
+                            <animate attributeName="x2" from="9" to="17" dur="1s" fill="freeze" />
+                        </line>
+                    </svg>
+                    Blog & Articles
+                </h2>
         <ul class="blog-list">
             <li>
                 <article class="blog-card reveal" tabindex="0" aria-labelledby="blog1-title">
@@ -274,11 +363,21 @@
     </div>
 
     <footer id="contact" class="site-footer">
-        <div class="container" style="text-align:right; margin-bottom:1rem;">
+    <div class="container" style="text-align:right; margin-bottom:1rem;">
             <a href="resume.pdf" download class="primary-btn" style="display:inline-block;">Download CV</a>
         </div>
-        <div class="container footer-inner">
-            <h2 class="visually-hidden">Contact Links</h2>
+                <div class="container footer-inner">
+                        <h2>
+                            <svg class="animated-icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <rect x="4" y="7" width="20" height="14" rx="4" stroke="#2563eb" stroke-width="3" stroke-dasharray="60" stroke-dashoffset="60">
+                                    <animate attributeName="stroke-dashoffset" from="60" to="0" dur="1s" fill="freeze" />
+                                </rect>
+                                <polyline points="7,10 14,16 21,10" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+                                    <animate attributeName="points" from="7,10 7,10 7,10" to="7,10 14,16 21,10" dur="1s" fill="freeze" />
+                                </polyline>
+                            </svg>
+                            Contact Links
+                        </h2>
             <ul class="social-links">
                 <li><a href="mailto:tdmm888@outlook.com">Email</a></li>
                 <li><a href="https://www.credly.com/users/munganga-thelly-mulongo" target="_blank" rel="noopener noreferrer">Credly</a></li>

@@ -59,11 +59,27 @@ const root = document.body;
 const darkPref = window.matchMedia('(prefers-color-scheme: dark)').matches;
 const storedTheme = localStorage.getItem('theme');
 if (storedTheme === 'dark' || (!storedTheme && darkPref)) {
-    root.setAttribute('data-theme', 'dark');
-    darkToggle?.setAttribute('aria-pressed', 'true');
+        root.setAttribute('data-theme', 'dark');
+        darkToggle?.setAttribute('aria-pressed', 'true');
 } else {
-    root.setAttribute('data-theme', 'light');
-    darkToggle?.setAttribute('aria-pressed', 'false');
+        root.setAttribute('data-theme', 'light');
+        darkToggle?.setAttribute('aria-pressed', 'false');
+}
+// Dark mode toggle
+document.getElementById('darkModeToggle')?.addEventListener('click', function() {
+    const current = document.body.getAttribute('data-theme');
+    let next;
+    if (current === 'dark') next = 'light';
+    else if (current === 'light') next = 'dark';
+    else next = 'dark';
+    document.body.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+});
+
+// On load, set theme from localStorage (supports blue/green)
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme && ['dark','light','blue','green'].includes(savedTheme)) {
+    document.body.setAttribute('data-theme', savedTheme);
 }
 darkToggle?.addEventListener('click', () => {
     const isDark = root.getAttribute('data-theme') === 'dark';
