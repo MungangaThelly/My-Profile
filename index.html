@@ -1,159 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Web Developer</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Portfolio of Munganga Thelly Mulongo – Frontend Developer focused on Web Security & Cybersecurity." />
+    <title>Munganga Thelly Mulongo – Frontend Developer focused on Web Security & Cybersecurity</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-    <header>
-        <div class="profile-img">
-            <!-- Add your profile image here -->
-            <img src="p.jpg" alt="Your Name" />
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" role="banner">
+        <div class="container header-inner">
+            <div class="profile-img">
+                <img src="p.jpg" alt="Portrait of Munganga Thelly Mulongo" width="120" height="120" loading="lazy" decoding="async" />
+            </div>
+            <div class="intro-text">
+                <h1 class="site-title">Munganga Thelly Mulongo</h1>
+                <p class="tagline">Web Developer • Cybersecurity Enthusiast</p>
+                <nav aria-label="Primary" class="primary-nav">
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#certificates">Certificates</a></li>
+                        <li><a href="#portfolio">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-        <h1>Munganga Thelly Mulongo</h1>
-        <p>Web Developer | Cybersecurity Enthusiast</p>
     </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hi, I'm Munganga Thelly, a passionate web developer with a focus on security. I enjoy building user-friendly websites and applications with a strong emphasis on secure coding practices.</p>
-    </section>
+    <main id="main" tabindex="-1">
+        <section id="about" class="section container">
+            <h2>About Me</h2>
+            <p>I'm a web developer focused on creating performant, accessible, and secure user experiences. I combine front‑end engineering discipline with security awareness to build reliable, user‑centered applications.</p>
+        </section>
 
-    <!-- Certificates Section -->
-    <section id="certificates">
-        <h2>Certificates</h2>
-        <div class="certificate-container">
-            <!-- Web Development Certificate -->
-            <div class="certificate">
-                <h3>Web Development Certificate</h3>
-                <p>Completed a comprehensive program in web development, learning front-end and back-end technologies.</p>
-                <div class="skills">
-                    <h4>Skills Learned:</h4>
-                    <ul>
-                        <li>HTML5, CSS3</li>
-                        <li>JavaScript, React</li>
-                        <li>Node.js</li>
-                    </ul>
+        <section id="certificates" class="section alt-bg">
+            <div class="container">
+                <h2>Certificates</h2>
+                <div class="certificate-container" role="list">
+                    <article class="certificate" role="listitem">
+                        <h3>Frontend Developer & Web Security</h3>
+                        <p>Full‑stack foundations: client and server fundamentals, deployment basics.</p>
+                        <ul class="pill-list">
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>JavaScript</li>
+                            <li>React</li>
+                            <li>Node.js</li>
+                            <li>Express.js</li>
+                            <li>MongoDB</li>
+                            <li>Storybook</li>
+                            <li>Web Security, Analysis and Implementation</li>
+                        </ul>
+                    </article>
+                    <article class="certificate" role="listitem">
+                        <h3>CCST Cybersecurity</h3>
+                        <p>Validates essential, job‑ready cybersecurity skills across network, endpoint, and incident response domains.</p>
+                        <ul class="pill-list">
+                            <li>Risk Management</li>
+                            <li>Network Security</li>
+                            <li>Endpoint Security</li>
+                            <li>Incident Handling</li>
+                            <li>Encryption</li>
+                            <li>Vulnerability Assessment</li>
+                        </ul>
+                    </article>
+                    <article class="certificate" role="listitem">
+                        <h3>MS Security, Compliance & Identity</h3>
+                        <p>Understanding of security, compliance & identity across Microsoft cloud services.</p>
+                        <ul class="pill-list">
+                            <li>Azure AD (Entra ID)</li>
+                            <li>Cloud Security</li>
+                            <li>Compliance Mgmt</li>
+                            <li>Identity Access Mgmt</li>
+                            <li>Information Protection</li>
+                        </ul>
+                    </article>
+                    <article class="certificate" role="listitem">
+                        <h3>Microsoft 365 Fundamentals</h3>
+                        <p>Foundational knowledge of SaaS collaboration & productivity services.</p>
+                        <ul class="pill-list">
+                            <li>Microsoft 365</li>
+                            <li>Security</li>
+                            <li>Team Collaboration</li>
+                            <li>Cloud Services</li>
+                        </ul>
+                    </article>
+                    <article class="certificate" role="listitem">
+                        <h3>Azure Fundamentals</h3>
+                        <p>Core Azure cloud concepts: compute, networking, storage, security.</p>
+                        <ul class="pill-list">
+                            <li>Azure</li>
+                            <li>Virtualization</li>
+                            <li>Cloud Networking</li>
+                            <li>Cloud Storage</li>
+                            <li>Security Basics</li>
+                        </ul>
+                    </article>
                 </div>
             </div>
+        </section>
 
-            <!-- Cybersecurity Basics Certificate -->
-            <div class="certificate">
-                <h3>CCST Cybersecurity</h3>
-                <p>The Cisco Certified Support Technician Cybersecurity certification validates the essential knowledge and skills necessary to demonstrate work-ready cybersecurity skills.</p>
-                <div class="skills">
-                    <h4>Skills Learned:</h4>
-                    <ul>
-                        <li>Cybersecurity</li>
-                        <li>Cybersecurity Auditing and Analysis</li>
-                        <li>Endpoint Security Concepts</li>
-                        <li>essential Cybersecurity Principles</li>
-                        <li>Incident Handling</li>
-                        <li>Network Security Concepts</li>
-                        <li>Risk Management</li>
-                        <li>Encryption Techniques</li>
-                        <li>Vulnerability Assessment</li>
-                    </ul>
+        <section id="portfolio" class="section container">
+            <h2>Selected Projects</h2>
+            <ul class="project-list">
+                <li>
+                    <article class="project-card">
+                        <h3><a href="#" rel="noopener">Project 1</a></h3>
+                        <p class="project-meta">Role: Front‑End | Stack: HTML, CSS, JS</p>
+                        <p>Short value statement describing impact or learning outcome.</p>
+                    </article>
+                </li>
+                <li>
+                    <article class="project-card">
+                        <h3><a href="#" rel="noopener">Project 2</a></h3>
+                        <p class="project-meta">Role: Full‑Stack | Stack: React, Node</p>
+                        <p>Brief problem solved / measurable improvement placeholder.</p>
+                    </article>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <button id="openFormBtn" class="open-form-btn" aria-haspopup="dialog" aria-controls="contactFormPopup">Contact Me</button>
+
+    <div id="contactFormPopup" class="contact-form-popup" role="dialog" aria-modal="true" aria-labelledby="contactTitle" aria-describedby="contactDesc" hidden>
+        <div class="form-container" role="document">
+            <button id="closeFormBtn" class="close-btn" aria-label="Close contact form">×</button>
+            <h2 id="contactTitle">Get in touch</h2>
+            <p id="contactDesc" class="dialog-desc">Fill the form and I'll get back to you.</p>
+            <form id="contactForm" novalidate>
+                <div class="form-field">
+                    <label for="name">Name<span aria-hidden="true">*</span></label>
+                    <input type="text" id="name" name="name" autocomplete="name" required />
                 </div>
-            </div>
-
-            <!-- Add more certificates here -->
-        <div class="certificate">
-            <h3>MS Security, Compliance and Identity</h3>
-            <p>Earners of the Security, Compliance, and Identity Fundamentals demonstrate a functional understanding of security, compliance, and identity (SCI) across cloud-based and related Microsoft services.</p>
-            <div class="skills">
-                <h4>Skills Learned:</h4>
-                <ul>
-                    <li>Azure</li>
-                    <li>Azure Active Directoty</li>
-                    <li>Cloud Security</li>
-                    <li>Compliance</li>
-                    <li>Compliance Management</li>
-                    <li>Identity And Access Management</li>
-                    <li>Information Protection And Governance</li>
-                    <li>Microosft 365</li>
-                    <li>Microosft Thread Protection</li>
-                    <li>Security Management</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="certificate">
-            <h3>Microsoft 365 Certified: Fundamentals</h3>
-            <p>Earning the Microsoft 365 Fundamentals certification demonstrates an understanding of the options available in Microsoft 365 and the benefits of adopting cloud services, the Software as a Service (SaaS) cloud model, and implementing Microsoft 365 cloud service.</p>
-            <div class="skills">
-                <h4>Skills Learned:</h4>
-                <ul>
-                    <li>Cloud Services</li>
-                    <li>Compliance</li>
-                    <li>Microosft 365</li>
-                    <li>Microosft Cloud Services</li>
-                    <li>Office 365</li>
-                    <li>Security</li>
-                    <li>Teamwork</li>
-                    <li>Windows 10</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="certificate">
-            <h3>Microsoft Certified: Azure Fundamentals</h3>
-            <p>Earners of the Azure Fundamentals certification have demonstrated foundational level knowledge of cloud services and how those services are provided with Microsoft Azure.</p>
-            <div class="skills">
-                <h4>Skills Learned:</h4>
-                <ul>
-                    <li>Azure</li>
-                    <li>Cloud Data</li>
-                    <li>Cloud Networking</li>
-                    <li>Cloud Security</li>
-                    <li>Cloud Services</li>
-                    <li>Cloud Storage</li>
-                    <li>Virtualization</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="portfolio">
-        <h2>Portfolio</h2>
-        <p>Here are some projects I've worked on:</p>
-        <ul>
-            <li><a href="#">Project 1</a> - Description of project.</li>
-            <li><a href="#">Project 2</a> - Description of project.</li>
-        </ul>
-    </section>
-
-    <!-- Contact Form Popup Button -->
-    <button id="openFormBtn" class="open-form-btn">Click here, if you want to be contacted!</button>
-
-    <!-- Popup Form -->
-    <div id="contactFormPopup" class="contact-form-popup">
-        <div class="form-container">
-            <span id="closeFormBtn" class="close-btn">&times;</span>
-            <h2>Contact Me!</h2>
-            <p>Please fill in this form *.</p>
-            <form id="contactForm">
-                <input type="text" id="name" name="name" required placeholder="Your name*" required><br><br>
-                <input type="email" id="email" name="email" placeholder="Your email address *" required><br><br>
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" rows="4" placeholder="Type in your message here..." required></textarea><br><br>
-                <button type="submit">Send</button>
+                <div class="form-field">
+                    <label for="email">Email<span aria-hidden="true">*</span></label>
+                    <input type="email" id="email" name="email" autocomplete="email" required />
+                </div>
+                <div class="form-field">
+                    <label for="message">Message<span aria-hidden="true">*</span></label>
+                    <textarea id="message" name="message" rows="4" required placeholder="How can I help?" ></textarea>
+                </div>
+                <button type="submit" class="primary-btn">Send</button>
+                <p class="form-status" aria-live="polite" hidden></p>
             </form>
         </div>
     </div>
 
-    <footer>
-        <h3>Contact</h3>
-        <p>Email    : tdmm888@outlook.com</p>
-        <p>credly   : <a href="https://www.credly.com/users/munganga-thelly-mulongo">github.com/in/yourprofile</a></p>
-        <p>linkedin : <a href="https://linkedin.com/in/thelly660">linkedin.com/in/yourprofile</a></p>
-        <p>github   : <a href="https://github.com/in/yourprofile">github.com/in/yourprofile</a></p>
-
+    <footer id="contact" class="site-footer">
+        <div class="container footer-inner">
+            <h2 class="visually-hidden">Contact Links</h2>
+            <ul class="social-links">
+                <li><a href="mailto:tdmm888@outlook.com">Email</a></li>
+                <li><a href="https://www.credly.com/users/munganga-thelly-mulongo" target="_blank" rel="noopener noreferrer">Credly</a></li>
+                <li><a href="https://linkedin.com/in/thelly660" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a href="https://github.com/in/yourprofile" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            </ul>
+            <p class="copyright">© <span id="year"></span> Munganga Thelly Mulongo</p>
+        </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
