@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <!-- LottieFiles CDN -->
+    <script src="https://unpkg.com/lottie-web@5.12.2/build/player/lottie.min.js"></script>
+    <script src="lottie-helper.js"></script>
 </head>
 <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -141,18 +144,19 @@
 
     <main id="main" tabindex="-1">
         <section id="about" class="section container">
-                        <h2>
-                            <svg class="animated-icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <circle cx="14" cy="14" r="12" stroke="#10b981" stroke-width="3" stroke-dasharray="75" stroke-dashoffset="75">
-                                    <animate attributeName="stroke-dashoffset" from="75" to="0" dur="1s" fill="freeze" />
-                                </circle>
-                                <path d="M14 8v4l3 3" stroke="#6366f1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <animate attributeName="stroke-dasharray" from="0,16" to="16,0" dur="1s" fill="freeze" />
-                                </path>
-                            </svg>
+                        <h2 style="display:flex;align-items:center;gap:.5em">
+                            <span id="aboutLottie" style="width:36px;height:36px;display:inline-block;"></span>
                             About Me
                         </h2>
-            <p>I'm a web developer focused on creating performant, accessible, and secure user experiences. I combine front‑end engineering discipline with security awareness to build reliable, user‑centered applications.</p>
+                        <p>I'm a web developer focused on creating performant, accessible, and secure user experiences. I combine front‑end engineering discipline with security awareness to build reliable, user‑centered applications.</p>
+                        <script>
+                        // Load Lottie animation for About section
+                        document.addEventListener('DOMContentLoaded', function() {
+                            if (window.lottie && document.getElementById('aboutLottie')) {
+                                loadLottieAnimation('aboutLottie', 'https://assets2.lottiefiles.com/packages/lf20_kkflmtur.json');
+                            }
+                        });
+                        </script>
         </section>
 
         <section id="certificates" class="section alt-bg">
